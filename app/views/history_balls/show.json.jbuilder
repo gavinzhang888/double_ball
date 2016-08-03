@@ -1,0 +1,1 @@
+json.partial! "history_balls/history_ball", history_ball: @history_ball

@@ -1,0 +1,1 @@
+json.partial! "double_balls/double_ball", double_ball: @double_ball

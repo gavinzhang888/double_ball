@@ -10,6 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160803151033) do
+
+  create_table "double_balls", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "period_number"
+    t.datetime "date"
+    t.integer  "red1"
+    t.integer  "red2"
+    t.integer  "red3"
+    t.integer  "red4"
+    t.integer  "red5"
+    t.integer  "red6"
+    t.integer  "blue"
+    t.integer  "week_num"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "history_balls", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "period_number"
+    t.datetime "date"
+    t.integer  "red1"
+    t.integer  "red2"
+    t.integer  "red3"
+    t.integer  "red4"
+    t.integer  "red5"
+    t.integer  "red6"
+    t.integer  "blue"
+    t.integer  "week_num"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
 end

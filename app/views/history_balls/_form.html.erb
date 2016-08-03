@@ -1,0 +1,67 @@
+<%= form_for(history_ball) do |f| %>
+  <% if history_ball.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(history_ball.errors.count, "error") %> prohibited this history_ball from being saved:</h2>
+
+      <ul>
+      <% history_ball.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :period_number %>
+    <%= f.text_field :period_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :red1 %>
+    <%= f.number_field :red1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :red2 %>
+    <%= f.number_field :red2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :red3 %>
+    <%= f.number_field :red3 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :red4 %>
+    <%= f.number_field :red4 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :red5 %>
+    <%= f.number_field :red5 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :red6 %>
+    <%= f.number_field :red6 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :blue %>
+    <%= f.number_field :blue %>
+  </div>
+
+  <div class="field">
+    <%= f.label :week_num %>
+    <%= f.number_field :week_num %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

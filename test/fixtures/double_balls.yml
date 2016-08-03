@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  period_number: MyString
+  date: 2016-08-03 23:06:36
+  red1: 1
+  red2: 1
+  red3: 1
+  red4: 1
+  red5: 1
+  red6: 1
+  blue: 1
+  week_num: 1
+
+two:
+  period_number: MyString
+  date: 2016-08-03 23:06:36
+  red1: 1
+  red2: 1
+  red3: 1
+  red4: 1
+  red5: 1
+  red6: 1
+  blue: 1
+  week_num: 1

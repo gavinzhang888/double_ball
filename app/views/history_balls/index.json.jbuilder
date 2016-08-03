@@ -1,0 +1,1 @@
+json.array! @history_balls, partial: 'history_balls/history_ball', as: :history_ball

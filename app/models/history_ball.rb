@@ -1,0 +1,2 @@
+class HistoryBall < ApplicationRecord
+end

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Double Balls</h1>
+<%= will_paginate @questions %>
+<table>
+  <thead>
+    <tr>
+      <th>Period number</th>
+      <th>Date</th>
+      <th>Red1</th>
+      <th>Red2</th>
+      <th>Red3</th>
+      <th>Red4</th>
+      <th>Red5</th>
+      <th>Red6</th>
+      <th>Blue</th>
+      <th>Week num</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @double_balls.each do |double_ball| %>
+      <tr>
+        <td><%= double_ball.period_number %></td>
+        <td><%= double_ball.date %></td>
+        <td><%= double_ball.red1 %></td>
+        <td><%= double_ball.red2 %></td>
+        <td><%= double_ball.red3 %></td>
+        <td><%= double_ball.red4 %></td>
+        <td><%= double_ball.red5 %></td>
+        <td><%= double_ball.red6 %></td>
+        <td><%= double_ball.blue %></td>
+        <td><%= double_ball.week_num %></td>
+        <td><%= link_to 'Show', double_ball %></td>
+        <td><%= link_to 'Edit', edit_double_ball_path(double_ball) %></td>
+        <td><%= link_to 'Destroy', double_ball, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Double Ball', new_double_ball_path %>

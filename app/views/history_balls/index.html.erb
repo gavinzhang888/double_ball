@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>History Balls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Period number</th>
+      <th>Date</th>
+      <th>Red1</th>
+      <th>Red2</th>
+      <th>Red3</th>
+      <th>Red4</th>
+      <th>Red5</th>
+      <th>Red6</th>
+      <th>Blue</th>
+      <th>Week num</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @history_balls.each do |history_ball| %>
+      <tr>
+        <td><%= history_ball.period_number %></td>
+        <td><%= history_ball.date %></td>
+        <td><%= history_ball.red1 %></td>
+        <td><%= history_ball.red2 %></td>
+        <td><%= history_ball.red3 %></td>
+        <td><%= history_ball.red4 %></td>
+        <td><%= history_ball.red5 %></td>
+        <td><%= history_ball.red6 %></td>
+        <td><%= history_ball.blue %></td>
+        <td><%= history_ball.week_num %></td>
+        <td><%= link_to 'Show', history_ball %></td>
+        <td><%= link_to 'Edit', edit_history_ball_path(history_ball) %></td>
+        <td><%= link_to 'Destroy', history_ball, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New History Ball', new_history_ball_path %>
