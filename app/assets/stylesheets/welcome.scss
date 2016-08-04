@@ -1,0 +1,13 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#top_html {
+  border: 2px solid red;
+  position: fixed; top: 0; left: 0;
+  background-color: #777;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+}

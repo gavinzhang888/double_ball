@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get "logout", :to => "devise/sessions#destroy"
     get "profile", :to => "devise/registrations#edit"
   end
-  # root to: "home#index"
+  root to: "welcome#index"
   resources :history_balls
   resources :double_balls
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

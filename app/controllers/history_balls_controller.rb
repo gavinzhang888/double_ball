@@ -5,7 +5,7 @@ class HistoryBallsController < ApplicationController
   # GET /history_balls
   # GET /history_balls.json
   def index
-    @history_balls = HistoryBall.all
+    @history_balls = HistoryBall.all.paginate(page:params[:page],per_page:10)
   end
 
   # GET /history_balls/1

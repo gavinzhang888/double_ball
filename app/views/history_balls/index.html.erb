@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>History Balls</h1>
+<%= will_paginate @questions %>
 
 <table>
   <thead>
@@ -41,5 +42,6 @@
 </table>
 
 <br>
+<%= will_paginate @questions %>
 
 <%= link_to 'New History Ball', new_history_ball_path %>
