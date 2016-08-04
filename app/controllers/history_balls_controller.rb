@@ -1,4 +1,5 @@
 class HistoryBallsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_history_ball, only: [:show, :edit, :update, :destroy]
 
   # GET /history_balls

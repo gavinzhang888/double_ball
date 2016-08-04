@@ -1,10 +1,11 @@
 class DoubleBallsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_double_ball, only: [:show, :edit, :update, :destroy]
 
   # GET /double_balls
   # GET /double_balls.json
   def index
-    @double_balls = DoubleBall.all.paginate(page:params[:page],per_page:10) 
+    @double_balls = DoubleBall.all.paginate(page:params[:page],per_page:10)
   end
 
   # GET /double_balls/1
