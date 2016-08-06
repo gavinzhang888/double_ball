@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #top_html {
-  border: 2px solid red;
+  border: 2px solid #777;
   position: absolute; top: 0; left: 0;
   background-color: #777;
   height: 60px;
@@ -22,11 +22,11 @@
 }
 #main_html {
   border: 2px solid #fff;
-  position: absolute;; top: 62px; left: 220px;margin-left: 0;padding-left: 0;
-  overflow-x: scroll;
+  position: absolute; top: 64px; left: 220px;margin-left: 0;padding-left: 0;
+  overflow: scroll;
   background-color: #fff;
   height: 100%;
-  width: 100%;
+  width: auto;;
   line-height: 60px;
   text-align: center;
   font-size: 30px;
@@ -46,9 +46,8 @@ h1 {
 table {
   padding: 0;margin: 0;
   border: 1px solid green;
-}
-table tr {
-  border: 1px solid red;
+  width: 100%;
+  height: auto;
 }
 table th {
   padding: 0;margin: 0;
@@ -57,10 +56,20 @@ table th {
   font-weight: lighter;
 }
 table td {
-  padding: 0;margin: 0;
+  padding: 5px;margin: 0px;
   border: 1px solid green;
   font-size: 15px;
 }
 .pagination {
   font-size: 15px;
+}
+p {
+  position: relative; margin-left: 20px;
+  text-align: left;
+}
+.red {
+  background-color: #f00;
+}
+.blue {
+  background-color: #00f;
 }

@@ -25,6 +25,7 @@
       <tr>
         <td><%= history_ball.period_number %></td>
         <td><%= history_ball.date %></td>
+        <td><%= history_ball.week_num %></td>
         <td><%= history_ball.red1 %></td>
         <td><%= history_ball.red2 %></td>
         <td><%= history_ball.red3 %></td>
@@ -32,7 +33,6 @@
         <td><%= history_ball.red5 %></td>
         <td><%= history_ball.red6 %></td>
         <td><%= history_ball.blue %></td>
-        <td><%= history_ball.week_num %></td>
         <td><%= link_to 'Show', history_ball %></td>
         <td><%= link_to 'Edit', edit_history_ball_path(history_ball) %></td>
         <td><%= link_to 'Destroy', history_ball, method: :delete, data: { confirm: 'Are you sure?' } %></td>

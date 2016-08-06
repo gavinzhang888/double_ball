@@ -9,7 +9,7 @@ class DoubleBallsController < ApplicationController
   end
 
   def list_show
-    @double_balls = DoubleBall.all.paginate(page:params[:page],per_page:20)
+    @double_balls = DoubleBall.all.paginate(page:params[:page],per_page:10)
   end
 
   # GET /double_balls/1

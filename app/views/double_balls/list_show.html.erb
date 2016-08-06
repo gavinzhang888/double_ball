@@ -2,20 +2,29 @@
 
 <h1>Double Balls</h1>
 <%= will_paginate @questions %>
-<table>
+<table class="table table-striped table-hover table-auto">
   <thead>
     <tr>
       <th><%= I18n.t :"double_ball.period_number" %></th>
       <th><%= I18n.t :"double_ball.date" %></th>
       <th><%= I18n.t :"double_ball.week_num" %></th>
-      <th><%= I18n.t :"double_ball.red1" %></th>
-      <th><%= I18n.t :"double_ball.red2" %></th>
-      <th><%= I18n.t :"double_ball.red3" %></th>
-      <th><%= I18n.t :"double_ball.red4" %></th>
-      <th><%= I18n.t :"double_ball.red5" %></th>
-      <th><%= I18n.t :"double_ball.red6" %></th>
-      <th><%= I18n.t :"double_ball.blue" %></th>
-      <th colspan="3"></th>
+      <th class="red"><%= I18n.t :"double_ball.red1" %></th>
+      <th class="red"><%= I18n.t :"double_ball.red2" %></th>
+      <th class="red"><%= I18n.t :"double_ball.red3" %></th>
+      <th class="red"><%= I18n.t :"double_ball.red4" %></th>
+      <th class="red"><%= I18n.t :"double_ball.red5" %></th>
+      <th class="red"><%= I18n.t :"double_ball.red6" %></th>
+      <th class="blue"><%= I18n.t :"double_ball.blue" %></th>
+      <% (1..33).each do |r| %>
+      <th class="red"><%= r %></th>
+      <% end %>
+      <% (1..16).each do |b| %>
+      <th class="blue"><%= b %></th>
+      <% end %>
+      <th>奇数</th>
+      <th>偶数</th>
+      <th>质数</th>
+      <th>合数</th>
     </tr>
   </thead>
 
@@ -23,24 +32,28 @@
     <% @double_balls.each do |double_ball| %>
       <tr>
         <td><%= double_ball.period_number %></td>
-        <td><%= double_ball.date %></td>
-        <td><%= double_ball.red1 %></td>
-        <td><%= double_ball.red2 %></td>
-        <td><%= double_ball.red3 %></td>
-        <td><%= double_ball.red4 %></td>
-        <td><%= double_ball.red5 %></td>
-        <td><%= double_ball.red6 %></td>
-        <td><%= double_ball.blue %></td>
-        <td><%= double_ball.week_num %></td>
-        <td><%= link_to 'Show', double_ball %></td>
-        <td><%= link_to 'Edit', edit_double_ball_path(double_ball) %></td>
-        <td><%= link_to 'Destroy', double_ball, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= double_ball.date.strftime('%Y-%m-%d') %></td>
+        <td><%= double_ball.get_week_day %></td>
+        <td class="red"><%= double_ball.red1 %></td>
+        <td class="red"><%= double_ball.red2 %></td>
+        <td class="red"><%= double_ball.red3 %></td>
+        <td class="red"><%= double_ball.red4 %></td>
+        <td class="red"><%= double_ball.red5 %></td>
+        <td class="red"><%= double_ball.red6 %></td>
+        <td class="blue"><%= double_ball.blue %></td>
+        <% (1..33).each do |r| %>
+        <th><%= r %></th>
+        <% end %>
+        <% (1..16).each do |b| %>
+        <th><%= b %></th>
+        <% end %>
+
+        <td><%= double_ball.ji_ou_number %></td>
+        <td><%= 6 - double_ball.ji_ou_number %></td>
+        <td><%= double_ball.get_zhishu %></td>
+        <td><%= 6 - double_ball.get_zhishu %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
 <%= will_paginate @questions %>
-
-<%= link_to 'New Double Ball', new_double_ball_path %>

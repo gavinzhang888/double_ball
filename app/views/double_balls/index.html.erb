@@ -21,26 +21,27 @@
 
   <tbody>
     <% @double_balls.each do |double_ball| %>
-      <tr>
-        <td><%= double_ball.period_number %></td>
-        <td><%= double_ball.date %></td>
-        <td><%= double_ball.week_num %></td>
-        <td><%= double_ball.red1 %></td>
-        <td><%= double_ball.red2 %></td>
-        <td><%= double_ball.red3 %></td>
-        <td><%= double_ball.red4 %></td>
-        <td><%= double_ball.red5 %></td>
-        <td><%= double_ball.red6 %></td>
-        <td><%= double_ball.blue %></td>
-        <td><%= link_to 'Show', double_ball %></td>
-        <td><%= link_to 'Edit', edit_double_ball_path(double_ball) %></td>
-        <td><%= link_to 'Destroy', double_ball, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= double_ball.period_number %></td>
+      <td><%= double_ball.date.strftime('%Y-%m-%d') %></td>
+      <td>
+        <%= double_ball.get_week_day %>
+      </td>
+      <td><%= double_ball.red1 %></td>
+      <td><%= double_ball.red2 %></td>
+      <td><%= double_ball.red3 %></td>
+      <td><%= double_ball.red4 %></td>
+      <td><%= double_ball.red5 %></td>
+      <td><%= double_ball.red6 %></td>
+      <td><%= double_ball.blue %></td>
+      <td><%= link_to 'Show', double_ball %></td>
+      <td><%= link_to 'Edit', edit_double_ball_path(double_ball) %></td>
+      <td><%= link_to 'Destroy', double_ball, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
 <%= will_paginate @questions %>
-
 <%= link_to 'New Double Ball', new_double_ball_path %>
