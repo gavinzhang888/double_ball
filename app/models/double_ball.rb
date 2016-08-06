@@ -19,6 +19,9 @@
 
 class DoubleBall < ApplicationRecord
 
+  def red_total
+    return (red1 + red2 + red3 + red4 + red5 + red6)
+  end
   def get_zhishu
     arr = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
     n = 0
@@ -30,19 +33,21 @@ class DoubleBall < ApplicationRecord
     n += 1 if arr.include? red6
     return n
   end
-  def is_have_num(set_number)
-    # b_n = 0
-    # arr = [red1, red2, red3, red4, red5, red6]
-    # b_n += 1 if arr.include? set_number
-    # b_n += 1 if arr.include? set_number
-    # b_n += 1 if arr.include? set_number
-    # b_n += 1 if arr.include? set_number
-    # b_n += 1 if arr.include? set_number
-    # b_n += 1 if arr.include? set_number
-    # boo = "false"
-    # boo = "true" if b_n > 0
-    # return boo
-    return "==="
+  def is_have_red(set_number)
+    r_n = 0
+    arr = [red1, red2, red3, red4, red5, red6]
+    r_n += 1 if arr.include? set_number
+    r_n += 1 if arr.include? set_number
+    r_n += 1 if arr.include? set_number
+    r_n += 1 if arr.include? set_number
+    r_n += 1 if arr.include? set_number
+    r_n += 1 if arr.include? set_number
+    return r_n
+  end
+  def is_have_blue(set_number)
+    b_n = 0
+    b_n += 1 if set_number == blue
+    return b_n
   end
   def get_week_day
     weekday = "星期"

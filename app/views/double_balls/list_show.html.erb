@@ -25,6 +25,8 @@
       <th>偶数</th>
       <th>质数</th>
       <th>合数</th>
+      <th>红和</th>
+      <th>总和</th>
     </tr>
   </thead>
 
@@ -42,16 +44,18 @@
         <td class="red"><%= double_ball.red6 %></td>
         <td class="blue"><%= double_ball.blue %></td>
         <% (1..33).each do |r| %>
-        <th><%= r %></th>
+        <th class="<% if double_ball.is_have_red(r) > 0 %> red : ''<% end%>"><%= r %></th>
         <% end %>
         <% (1..16).each do |b| %>
-        <th><%= b %></th>
+        <th class="<% if double_ball.is_have_blue(b) > 0 %> blue : ''<% end%>"><%= b %></th>
         <% end %>
 
         <td><%= double_ball.ji_ou_number %></td>
         <td><%= 6 - double_ball.ji_ou_number %></td>
         <td><%= double_ball.get_zhishu %></td>
         <td><%= 6 - double_ball.get_zhishu %></td>
+        <td><%= double_ball.red_total %></td>
+        <td><%= double_ball.red_total + double_ball.blue %></td>
       </tr>
     <% end %>
   </tbody>
