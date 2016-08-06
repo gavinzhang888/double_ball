@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   end
   root to: "welcome#index"
   resources :history_balls
-  resources :double_balls
+  resources :double_balls do
+    collection do
+      get 'list_show'
+    end
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

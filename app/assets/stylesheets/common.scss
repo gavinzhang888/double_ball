@@ -1,0 +1,66 @@
+// Place all the styles related to the double_balls controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#top_html {
+  border: 2px solid red;
+  position: absolute; top: 0; left: 0;
+  background-color: #777;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+}
+#left_html {
+  border: 2px solid #777;
+  position: absolute; top: 62px; left: 0;
+  background-color: #777;
+  height: 100%;
+  width: 200px;
+  line-height: 60px;
+  text-align: center;
+}
+#main_html {
+  border: 2px solid #fff;
+  position: absolute;; top: 62px; left: 220px;margin-left: 0;padding-left: 0;
+  overflow-x: scroll;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+}
+#left_html ul {
+  list-style: none;
+}
+#left_html ul li {
+  padding-left: 0;margin-left: 0;
+  text-align: left;
+  font-size: 15px;
+}
+h1 {
+  text-align: left;
+  font-size: 20px;
+}
+table {
+  padding: 0;margin: 0;
+  border: 1px solid green;
+}
+table tr {
+  border: 1px solid red;
+}
+table th {
+  padding: 0;margin: 0;
+  border: 1px solid green;
+  font-size: 18px;
+  font-weight: lighter;
+}
+table td {
+  padding: 0;margin: 0;
+  border: 1px solid green;
+  font-size: 15px;
+}
+.pagination {
+  font-size: 15px;
+}

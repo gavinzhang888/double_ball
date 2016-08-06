@@ -1,0 +1,22 @@
+zh-CN:
+  double_ball:
+    modelname: 预测
+    formname: 预测
+    period_number: 期数
+    date: 开奖日期
+    red1: 红球
+    red2: 红球
+    red3: 红球
+    red4: 红球
+    red5: 红球
+    red6: 红球
+    blue: 篮球
+    week_num: 期数
+    created_at: 创建于
+    updated_at: 更新于
+    creator: 创建人
+
+  activerecord:
+    attributes:
+      double_ball:
+        week_num: 期数

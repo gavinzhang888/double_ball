@@ -9,6 +9,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="top_html">欢迎进入双色球管理系统</div>
+    <div id="left_html">
+      <ul>
+        <li><a href="/double_balls">预测</a></li>
+        <li><a href="/history_balls">历史记录</a></li>
+        <li><a href="/double_balls/list_show">和总</a></li>
+      </ul>
+    </div>
+    <div id="main_html">
+      <%= yield %>
+    </div>
   </body>
 </html>

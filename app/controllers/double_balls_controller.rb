@@ -8,6 +8,10 @@ class DoubleBallsController < ApplicationController
     @double_balls = DoubleBall.all.paginate(page:params[:page],per_page:10)
   end
 
+  def list_show
+    @double_balls = DoubleBall.all.paginate(page:params[:page],per_page:20)
+  end
+
   # GET /double_balls/1
   # GET /double_balls/1.json
   def show
